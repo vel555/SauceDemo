@@ -22,9 +22,9 @@ public class SaucedemoLocators {
 
         WebElement inputFieledTagName = driver.findElement(By.tagName("input"));
 
-        WebElement linkText = driver.findElement(By.linkText("standard_user"));
+        //WebElement linkText = driver.findElement(By.linkText("standard_user"));
 
-        WebElement partialLinkText = driver.findElement(By.partialLinkText("standard"));
+        //WebElement partialLinkText = driver.findElement(By.partialLinkText("standard"));
 
 
         usernameFielendId.sendKeys("standard_user");
