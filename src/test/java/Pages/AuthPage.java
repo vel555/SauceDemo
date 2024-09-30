@@ -7,12 +7,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class AuthPage extends BasePage {
-    private By usernameField = By.id("user-name");
-    private By passwordField = By.id("password");
-    private By loginButton = By.className("btn_action");
-    private By errorMessage = By.cssSelector(".error-message-container");
+    private final By usernameField = By.id("user-name");
+    private final By passwordField = By.id("password");
+    private final By loginButton = By.id("login-button");
+    private final By errorMessage = By.cssSelector("#login_button_container > div >" +
+            " form > div.error-message-container.error > h3");
 
     public AuthPage(WebDriver driver) {
+
         super(driver);
     }
 
@@ -23,6 +25,7 @@ public class AuthPage extends BasePage {
     }
 
     public String getErrorMessage() {
+
         return driver.findElement(errorMessage).getText();
     }
 }

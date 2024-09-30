@@ -1,14 +1,12 @@
 
-
-
 package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class CartPage extends BasePage {
-    private By itemName = By.className("inventory_item_name");
-    private By removeButton = By.className("btn_remove");
+    private final By itemName = By.className("inventory_item_name");
+    private final By removeButton = By.id("remove-sauce-labs-backpack");
 
     public CartPage(WebDriver driver) {
         super(driver);
